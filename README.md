@@ -1,12 +1,16 @@
-# dev tooling
+# react examples
 
-Examples of minimal configuration of development tooling for specific use cases with
-the following libraries and tools:
+The source code for each example is assumed to be written in es6 (with babel transpiling to es5) unless the example name is prefixed with `es5-`.
+
+Examples work with the following libraries:  
 - webpack
 - webpack-dev-server
-- react and jsx
+- static-site-generator-webpack-plugin
+- react
+- react-router
+- redux
+- falcor
 - eslint
-- nodemon
 - babel
 
 

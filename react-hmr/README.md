@@ -1,7 +1,6 @@
 ## react hmr
 
-Hapi? Consider:
-https://github.com/gaearon/react-transform-boilerplate/issues/9
+Note: [Awaiting hmr to support pure functions](https://github.com/gaearon/react-transform-boilerplate/issues/9)
 
 
 ## Installation
