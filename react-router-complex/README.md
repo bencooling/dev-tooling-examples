@@ -23,11 +23,19 @@ Built with latest releases such as `react router 2.0.0-rc4` & `Babel 6`
 
 ## gh-pages
 
+**Create new branch**  
+`git checkout --orphan gh-pages`
+
+### index files:
 **search** `"/build/bundle.js`  
 **replace** `"/react-examples/react-router-complex/build/bundle.js`
 
-**secret source!**  
-`git checkout --orphan gh-pages`
+### webpack.config
+
+### component links
+**search** `to="/`  
+**replace** `to="/react-examples/react-router-complex/`
+
 
 **resources**  
 -[Creating Project Pages manually](https://help.github.com/articles/creating-project-pages-manually/)
