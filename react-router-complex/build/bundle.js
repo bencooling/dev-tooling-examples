@@ -168,7 +168,7 @@
 
 	var routes = _react2.default.createElement(
 	  _reactRouter.Route,
-	  { getComponent: getComponent('App') },
+	  { path: '/react-examples/react-router-complex', getComponent: getComponent('App') },
 	  _react2.default.createElement(_reactRouter.Route, { path: '/', getComponent: getComponent('Home') }),
 	  _react2.default.createElement(_reactRouter.Route, { path: 'about', getComponent: getComponent('About') }),
 	  _react2.default.createElement(_reactRouter.Route, { path: 'blog', getComponent: getComponent('Blog') }),

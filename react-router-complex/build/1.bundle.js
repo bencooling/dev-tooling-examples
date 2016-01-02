@@ -83,7 +83,7 @@ webpackJsonp([1],{
 	          null,
 	          _react2.default.createElement(
 	            _reactRouter.Link,
-	            { activeClassName: 'active', to: '/' },
+	            { activeClassName: 'active', to: '/react-examples/react-router-complex/' },
 	            'Home'
 	          )
 	        ),
@@ -92,7 +92,7 @@ webpackJsonp([1],{
 	          null,
 	          _react2.default.createElement(
 	            _reactRouter.Link,
-	            { activeClassName: 'active', to: '/about' },
+	            { activeClassName: 'active', to: '/react-examples/react-router-complex/about' },
 	            'About'
 	          )
 	        ),
@@ -101,7 +101,7 @@ webpackJsonp([1],{
 	          null,
 	          _react2.default.createElement(
 	            _reactRouter.Link,
-	            { activeClassName: 'active', to: '/blog' },
+	            { activeClassName: 'active', to: '/react-examples/react-router-complex/blog' },
 	            'Blog'
 	          )
 	        ),
@@ -110,7 +110,7 @@ webpackJsonp([1],{
 	          null,
 	          _react2.default.createElement(
 	            _reactRouter.Link,
-	            { activeClassName: 'active', to: '/blog/123' },
+	            { activeClassName: 'active', to: '/react-examples/react-router-complex/blog/123' },
 	            'Post 123'
 	          )
 	        )
