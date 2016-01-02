@@ -47,7 +47,7 @@ const getComponent = (component) =>
   };
 
 const routes = (
-  <Route getComponent={getComponent('App')}>
+  <Route path="/react-examples/react-router-complex" getComponent={getComponent('App')}>
     <Route path="/" getComponent={getComponent('Home')}></Route>
     <Route path="about" getComponent={getComponent('About')}></Route>
     <Route path="blog" getComponent={getComponent('Blog')}></Route>
