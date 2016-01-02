@@ -19,3 +19,9 @@ Built with latest releases such as `react router 2.0.0-rc4` & `Babel 6`
 
 **run local server**  
 `npm run serve`
+
+
+## gh-pages
+
+**search** `"/build/bundle.js`  
+**replace** `"/react-examples/build/bundle.js`
