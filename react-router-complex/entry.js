@@ -47,12 +47,12 @@ const getComponent = (component) =>
   };
 
 const routes = (
-  <Route path="/react-examples/react-router-complex" getComponent={getComponent('App')}>
-    <Route path="/" getComponent={getComponent('Home')}></Route>
-    <Route path="about" getComponent={getComponent('About')}></Route>
-    <Route path="blog" getComponent={getComponent('Blog')}></Route>
-    <Route path="blog/:postId" getComponent={getComponent('Post')}></Route>
-    <Route path="*" component={NoMatch} ></Route>
+  <Route getComponent={getComponent('App')}>
+    <Route path="/react-examples/react-router-complex/" getComponent={getComponent('Home')}></Route>
+    <Route path="/react-examples/react-router-complex/about" getComponent={getComponent('About')}></Route>
+    <Route path="/react-examples/react-router-complex/blog" getComponent={getComponent('Blog')}></Route>
+    <Route path="/react-examples/react-router-complex/blog/:postId" getComponent={getComponent('Post')}></Route>
+    <Route path="/react-examples/react-router-complex/*" component={NoMatch} ></Route>
   </Route>
 );
 
