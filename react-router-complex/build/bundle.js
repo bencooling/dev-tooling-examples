@@ -168,12 +168,12 @@
 
 	var routes = _react2.default.createElement(
 	  _reactRouter.Route,
-	  { path: '/react-examples/react-router-complex', getComponent: getComponent('App') },
-	  _react2.default.createElement(_reactRouter.Route, { path: '/', getComponent: getComponent('Home') }),
-	  _react2.default.createElement(_reactRouter.Route, { path: 'about', getComponent: getComponent('About') }),
-	  _react2.default.createElement(_reactRouter.Route, { path: 'blog', getComponent: getComponent('Blog') }),
-	  _react2.default.createElement(_reactRouter.Route, { path: 'blog/:postId', getComponent: getComponent('Post') }),
-	  _react2.default.createElement(_reactRouter.Route, { path: '*', component: NoMatch })
+	  { getComponent: getComponent('App') },
+	  _react2.default.createElement(_reactRouter.Route, { path: '/react-examples/react-router-complex/', getComponent: getComponent('Home') }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/react-examples/react-router-complex/about', getComponent: getComponent('About') }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/react-examples/react-router-complex/blog', getComponent: getComponent('Blog') }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/react-examples/react-router-complex/blog/:postId', getComponent: getComponent('Post') }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/react-examples/react-router-complex/*', component: NoMatch })
 	);
 
 	(0, _reactDom.render)(_react2.default.createElement(
