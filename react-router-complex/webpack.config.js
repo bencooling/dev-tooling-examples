@@ -9,7 +9,7 @@ module.exports = {
   ],
   output: {
     path: 'build',
-    publicPath: '/react-examples/build/',
+    publicPath: '/react-examples/react-router-complex/build/',
     filename: 'bundle.js'
   },
   module: {

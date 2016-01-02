@@ -85,7 +85,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/react-examples/build/";
+/******/ 	__webpack_require__.p = "/react-examples/react-router-complex/build/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
