@@ -1,35 +1,66 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
+import { Router, Route, browserHistory } from 'react-router';
 
-const App = ({children}) =>
-  <div>
-    <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/about">About</Link></li>
-      <li><Link to="/inbox">Inbox</Link></li>
-    </ul>
-    {children}
-  </div>;
+// redux related modules
+import { compose, createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
+
+import { createDevTools, persistState } from 'redux-devtools';
+import LogMonitor from 'redux-devtools-log-monitor';
+import DockMonitor from 'redux-devtools-dock-monitor';
+
+import { createHistory } from 'history';
+import { syncReduxAndRouter, routeReducer } from 'redux-simple-router';
+
+const reducer = combineReducers(Object.assign({}, {
+  routing: routeReducer
+}));
+
+const DevTools = createDevTools(
+  <DockMonitor toggleVisibilityKey='H' changePositionKey='Q'>
+    <LogMonitor />
+  </DockMonitor>
+);
+
+const finalCreateStore = compose(
+  DevTools.instrument(),
+  persistState(
+    window.location.href.match(
+      /[?&]debug_session=([^&]+)\b/
+    )
+  )
+)(createStore);
+
+const store = finalCreateStore(reducer);
+
+syncReduxAndRouter(browserHistory, store);
+
+const NoMatch = () =>
+  <h2>404</h2>;
+
+const getComponent = (component) =>
+  (location, cb) => {
+    require.ensure([], (require) => {
+      cb(null, require(`./components/${component}`));
+    });
+  };
+
+const routes = (
+  <Route getComponent={getComponent('App')}>
+    <Route path="/" getComponent={getComponent('Home')}></Route>
+    <Route path="about" getComponent={getComponent('About')}></Route>
+    <Route path="blog" getComponent={getComponent('Blog')}></Route>
+    <Route path="blog/:postId" getComponent={getComponent('Post')}></Route>
+    <Route path="*" component={NoMatch} ></Route>
+  </Route>
+);
 
 render((
-  <Router history={browserHistory}>
-    <Route path="/" component={App} >
-      <IndexRoute getComponent={(location, cb) => {
-        require.ensure([], function (require){
-          cb(null, require('./components/Home'));
-        });
-      }} />
-      <Route path="about" getComponent={(location, cb) => {
-        require.ensure([], function (require){
-          cb(null, require('./components/About'));
-        });
-      }} />
-      <Route path="inbox" getComponent={(location, cb) => {
-        require.ensure([], function (require){
-          cb(null, require('./components/Inbox'));
-        });
-      }} />
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <div>
+      <Router history={browserHistory} routes={routes} />
+      <DevTools />
+    </div>
+  </Provider>
 ), document.getElementById('root'));

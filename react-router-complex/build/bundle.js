@@ -114,6 +114,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// sync loaded
 	var App = function App(_ref) {
 	  var children = _ref.children;
 	  return _react2.default.createElement(
@@ -127,7 +128,7 @@
 	        null,
 	        _react2.default.createElement(
 	          _reactRouter.Link,
-	          { to: '/' },
+	          { activeClassName: 'active', to: '/' },
 	          'Home'
 	        )
 	      ),
@@ -136,7 +137,7 @@
 	        null,
 	        _react2.default.createElement(
 	          _reactRouter.Link,
-	          { to: '/about' },
+	          { activeClassName: 'active', to: '/about' },
 	          'About'
 	        )
 	      ),
@@ -145,8 +146,17 @@
 	        null,
 	        _react2.default.createElement(
 	          _reactRouter.Link,
-	          { to: '/inbox' },
-	          'Inbox'
+	          { activeClassName: 'active', to: '/blog' },
+	          'Blog'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { activeClassName: 'active', to: '/blog/123' },
+	          'Post 123'
 	        )
 	      )
 	    ),
@@ -154,27 +164,27 @@
 	  );
 	};
 
+	var getComponent = function getComponent(component) {
+	  return function (location, cb) {
+	    __webpack_require__.e/* nsure */(1, function (require) {
+	      cb(null, __webpack_require__(216)("./" + component));
+	    });
+	  };
+	};
+
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
 	  { history: _reactRouter.browserHistory },
 	  _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: '/', component: App },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { getComponent: function getComponent(location, cb) {
-	        __webpack_require__.e/* nsure */(1, function (require) {
-	          cb(null, __webpack_require__(216));
-	        });
-	      } }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'about', getComponent: function getComponent(location, cb) {
-	        __webpack_require__.e/* nsure */(2, function (require) {
-	          cb(null, __webpack_require__(217));
-	        });
-	      } }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'inbox', getComponent: function getComponent(location, cb) {
-	        __webpack_require__.e/* nsure */(3, function (require) {
-	          cb(null, __webpack_require__(218));
-	        });
-	      } })
+	    { component: App },
+	    _react2.default.createElement(_reactRouter.Route, { path: '/', getComponent: getComponent('Home') }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'about', getComponent: getComponent('About') }),
+	    _react2.default.createElement(
+	      _reactRouter.Route,
+	      { path: 'blog', getComponent: getComponent('Blog') },
+	      _react2.default.createElement(_reactRouter.Route, { path: 'blog/:postId', getComponent: getComponent('Post') })
+	    )
 	  )
 	), document.getElementById('root'));
 

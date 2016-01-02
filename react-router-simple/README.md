@@ -1,6 +1,6 @@
 # react router simple
 
-Very simple example with navigation and top level routes.
+Very simple example with navigation with top level routes.
 Built with `react router 2.0.0-rc4`
 
 ## Installation

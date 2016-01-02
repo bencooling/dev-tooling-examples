@@ -16,8 +16,18 @@ Examples work with the following libraries:
 
 ## examples
 
-### react hmr
+### react router complex  
+**features**  
+- 2 level deep navigation with URL Parameters
+- code splitting (load code on demand)
+- basic universal (reload browser works)
+- redux with time travel
+- build with latest releases: babel 6, react-router 2
 
+### react router simple  
+Very simple example with top level navigation routes
+
+### react hmr  
 - React Hot Module Replacement (react-transform-hmr) with Babel 6
 - webpack-dev-server usage as opposed to [Express server + middleware plugins](https://github.com/gaearon/react-transform-boilerplate)
 - Demonstrates [lack of (current) support for functional components](https://github.com/gaearon/react-transform-hmr/issues/6)
