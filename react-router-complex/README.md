@@ -24,7 +24,7 @@ Built with latest releases such as `react router 2.0.0-rc4` & `Babel 6`
 ## gh-pages
 
 **search** `"/build/bundle.js`  
-**replace** `"/react-examples/build/bundle.js`
+**replace** `"/react-examples/react-router-complex/build/bundle.js`
 
 **secret source!**  
 `git checkout --orphan gh-pages`
