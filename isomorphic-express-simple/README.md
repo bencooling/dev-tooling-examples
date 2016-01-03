@@ -1,4 +1,4 @@
-# static site express
+# isomorphic express simple  
 
 A simple (the simplest?) universal/isomorphic react implementation.
 
