@@ -1,6 +1,6 @@
 # react examples
 
-## common features to all examples
+#### common features to all examples
 - npm as build tool
 - webpack for client module bundling
 - babel for compiling es6 source code
