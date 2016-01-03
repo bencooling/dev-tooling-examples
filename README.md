@@ -1,7 +1,6 @@
 # react examples
 
 ## common features to all examples
-- The source code is assumed to be written in es6 unless the example name is prefixed with `es5-`.
 - npm as build tool
 - webpack for client module bundling
 - babel for compiling es6 source code
