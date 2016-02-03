@@ -1,0 +1,17 @@
+{
+  "name": "react-examples-webpack-automatic-refresh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "serve": "webpack-dev-server --inline --port 3000 --no-info --progress"
+  },
+  "author": "Ben Cooling <office@bcooling.com.au> (http://bcooling.com.au)",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}

@@ -19,3 +19,8 @@ Built with latest releases such as `react router 2.0.0-rc4` & `Babel 6`
 
 **run local server**  
 `npm run serve`
+
+
+## Resources
+
+- [Welcome to Future of Web Application Delivery](https://medium.com/@ryanflorence/welcome-to-future-of-web-application-delivery-9750b7564d9f#.jut0zibn0)

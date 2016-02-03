@@ -9,6 +9,10 @@
 ## examples
 
 
+## react-static-site-generator
+- npm build tool to publish markdown to html files
+- isomorphic react code
+
 ## isomorphic express simple  
 - isomorphic, react component is served from server, client doesn't render just
 attaches events and relevant interactions.
@@ -19,7 +23,7 @@ attaches events and relevant interactions.
 ### react router complex  
 **features**  
 - 2 level deep navigation with URL Parameters
-- code splitting (load code on demand)
+- code splitting (load code on demand) with [gradual matching](https://github.com/rackt/react-router/blob/b06d1db7864ba16e36dc7bdae40e18ed86d23907/docs/guides/advanced/DynamicRouting.md)
 - basic universal (reload browser works)
 - redux with time travel
 - build with latest releases: babel 6, react-router 2

@@ -3,12 +3,12 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    './entry.js'
+    Path.resolve('./entry.js')
     // 'webpack-dev-server/client?http://localhost:3000',
     // 'webpack/hot/only-dev-server'
   ],
   output: {
-    path: 'build',
+    path: Path.join(__dirname, 'build'),
     publicPath: '/build/',
     filename: 'bundle.js'
   },

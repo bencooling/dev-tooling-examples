@@ -1,0 +1,19 @@
+{
+  "name": "react-examples-webpack-hrm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "serve": "webpack-dev-server --inline --hot --port 3000 --no-info --progress"
+  },
+  "author": "Ben Cooling <office@bcooling.com.au> (http://bcooling.com.au)",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
